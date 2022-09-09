@@ -1,9 +1,9 @@
 /**
  * DOM OBJECTS
  */
-const $boardGame = document.querySelector(".board-container");
-const $statusGame = document.querySelector(".status-game");
-const $restartButton = document.querySelector(".btn-restart");
+const $boardGame = document.querySelector('.board-container')
+const $statusGame = document.querySelector('.status-game')
+const $restartButton = document.querySelector('.btn-restart')
 
 // Array creado para verificaciones con el tablero
 const GAME_STATE = ["", "", "", "", "", "", "", "", ""];
@@ -75,7 +75,6 @@ function handleCellClick(e) {
 }
 
 function handleMovePlayer(index) {
-
   /**
    * handleTurnPlayer();
    * handleBoard();
