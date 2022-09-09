@@ -1,0 +1,24 @@
+{
+  "name": "tictactoe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/",
+    "lint-fix": "eslint src/ --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrkAnxiety/Tic-Tac-Toe-JS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DrkAnxiety/Tic-Tac-Toe-JS/issues"
+  },
+  "homepage": "https://github.com/DrkAnxiety/Tic-Tac-Toe-JS#readme",
+  "devDependencies": {
+    "eslint": "^8.23.0"
+  }
+}
