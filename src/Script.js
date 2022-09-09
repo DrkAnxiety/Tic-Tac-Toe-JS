@@ -59,10 +59,27 @@ function listeners() {
 function handleCellClick(e) {
   let $clickedCell = e.target;
 
-  if($clickedCell.classList.contains('board-cell')){
-    let clickedCellIndex = Array.from($clickedCell.parentNode.children).indexOf($clickedCell);
-    // Aqui tenemos el index de la celda del tablero
+  console.log($clickedCell);
+
+  if ($clickedCell.classList.contains("board-cell")) {
+    let clickedCellIndex = Array.from($clickedCell.parentNode.children).indexOf(
+      $clickedCell
+    );
+
+    if (GAME_STATE[clickedCellIndex] !== "") {
+      return;
+    }
+
+    handleMovePlayer();
   }
+}
+
+function handleMovePlayer(index) {
+
+  /**
+   * handleTurnPlayer();
+   * handleBoard();
+   */
 }
 
 function handleRestartClick() {}

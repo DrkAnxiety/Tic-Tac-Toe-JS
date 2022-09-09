@@ -3,27 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="Description" content="Page created for playing tic-tac-toe" />
-    <link rel="stylesheet" src="./Style.css" />
+    <link rel="stylesheet" href="./Style.css" />
     <title>Tic-Tac-Toe</title>
   </head>
 
   <body>
     <main class="main-container">
       <article class="data-container">
-        <h1>Tic-Tac-Toe</h1>
-        <h2 class="status-game"></h2>
-        <button class="btn-restart">Restart</button>
+        <div class="data">
+          <h1 class="logo-container">
+            <span
+              class="letter-container"
+              style="
+                --content: 'TIC';
+                --start-color: #007cf0;
+                --end-color: #00dfd8;
+                --delay: 0s;
+              "
+              >TIC</span
+            >
+            <span
+              class="letter-container"
+              style="
+                --content: 'TAC';
+                --start-color: #7928ca;
+                --end-color: #ff0080;
+                --delay: 2s;
+              "
+              >TAC</span
+            >
+            <span
+              class="letter-container"
+              style="
+                --content: 'TOE';
+                --start-color: #ff4d4d;
+                --end-color: #f9cb28;
+                --delay: 4s;
+              "
+              >TOE</span
+            >
+          </h1>
+          <h2 class="status-game"></h2>
+          <button class="btn-restart">Restart</button>
+        </div>
       </article>
+
       <article class="board-container">
-        <div class="board-cell">X</div>
-        <div class="board-cell">X</div>
-        <div class="board-cell">X</div>
-        <div class="board-cell">X</div>
-        <div class="board-cell">X</div>
-        <div class="board-cell">X</div>
-        <div class="board-cell">X</div>
-        <div class="board-cell">X</div>
-        <div class="board-cell">X</div>
+        <div class="board">
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell">X</div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+          <div class="board-cell"></div>
+        </div>
       </article>
     </main>
 

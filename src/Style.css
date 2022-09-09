@@ -1,3 +1,8 @@
+:root {
+  --button-shadow: -2px -2px 4px #ffffff0d, 0 0 10px 10px #ffffff01,
+    2px 2px 8px #3c3c3c1a;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,14 +10,156 @@
   font-size: 10px;
 }
 
-h1 {
-  font-size: 2em;
-  color: red;
+body,
+html {
+  background: #0f0f0f;
 }
 
 .main-container {
+  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid red;
+}
+
+.data-container {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 3em;
+}
+
+.logo-container {
+  margin: 0 0 1.6em;
+}
+
+.letter-container {
+  display: block;
+  font-size: 8em;
+  text-align: center;
+  line-height: 1.1;
+  font-weight: 900;
+  position: relative;
+  animation: animation-text 6s linear infinite;
+  animation-delay: var(--delay);
+}
+
+.letter-container::before {
+  background: linear-gradient(90deg, var(--start-color), var(--end-color));
+  content: var(--content);
+  position: absolute;
+  inset: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes animation-text {
+  0%,
+  16.667%,
+  100% {
+    opacity: 1;
+  }
+
+  33.333%,
+  83.333% {
+    opacity: 0;
+  }
+}
+
+.status-game {
+  font-size: 5em;
+  color: #fff;
+}
+
+.btn-restart {
+  padding: 1em;
+  width: 10em;
+  text-align: center;
+  border: none;
+  outline: none;
+  height: 3em;
+  color: #fff;
+  border-radius: 0.5em;
+  background-color: #556ff7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  transition: 0.5s;
+}
+
+.btn-restart:hover {
+  border: 0.1em solid #fff;
+  background-color: transparent;
+}
+
+.board-container {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  min-width: 70%;
+  height: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.8em;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6em;
+  border-radius: 1.5em;
+}
+
+.board-cell {
+  /* border: 2px solid white; */
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  color: #556ff7;
+  width: 30%;
+  transition: 0.5s;
+  height: 30%;
+  box-shadow: var(--button-shadow);
+  animation: animation-color 6s ease-in-out infinite;
+}
+
+@keyframes animation-color {
+  0% {
+    color: #3d5dff;
+  }
+  20% {
+    color: #4f6cff;
+  }
+  40% {
+    color: #6b83ff;
+  }
+  60% {
+    color: #6b83ff;
+  }
+  80% {
+    color: #4f6cff;
+  }
+  100% {
+    color: #3d5dff;
+  }
+}
+
+.board-cell:hover {
+  font-size: 6em;
 }
